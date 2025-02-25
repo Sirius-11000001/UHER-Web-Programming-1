@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/main-style.css">
+    <style>
+        
+    </style>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            toggleBtn.innerHTML = sidebar.classList.contains('open') ? '▶' : '◀';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <span>Chanel</span>
+        <img src="assets/media/logo.png" alt="">
+    </div>
+
+    <img class="home" src="assets/media/home.jpg" alt="">
+    
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="template/profil.html">Profile</a>
+      <a href="template/galeri.html">Galeri</a>
+    </div>
+    <div class="sidebar">
+        <a class="fa fa-facebook" href="http://facebook.com">Facebook</a>
+        <a class="fa fa-linkedin" href="http://linkedin.com">LinkedIn</a>
+        <a class="fa fa-instagram" href="http://instagram.com">Instagram</a>
+        <a class="fa fa-github" href="http://github.com">GitHub</a>
+    </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">◀</button>
+    
+    <!-- opening -->
+    <div class="content">
+        <span>Welcome to Chanel</span>
+        <p>Find Your Fahsion Vibe, </p>
+        <p>Express Yourself</p>
+    </div>
+
+    <div class="ex">
+        <h1>What you looking for?</h1>
+    </div>
+    <!-- konten -->
+    <div class="grid-container">
+        <div class="grid-item" style="background-image: url('assets/media/sepatu.jpg');"><span>Sandals</span></div>
+        <div class="grid-item" style="background-image: url('assets/media/baju.jpg');"><span>Clothes</span></div>
+        <div class="grid-item" style="background-image: url('assets/media/a1.jpg');"><span>Daily Neutrals</span></div>
+        <div class="grid-item" style="background-image: url('assets/media/a2.jpg');"><span>Over Clothes</span></div>
+        <div class="grid-item" style="background-image: url('assets/media/tas.jpg');"><span>Bag</span></div>
+        <div class="grid-item" style="background-image: url('assets/media/aksesoris.jpg');"><span>Accessories</span></div>
+    </div>
+
+    <!-- footer -->
+     <footer>
+        <span>All right reserved &copy; Copyright 2025, Alvin Zaki Rosyidin - 17230453. Created with &#10084;</span>
+     </footer>
+</body>
+</html>

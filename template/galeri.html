@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/galeri-style.css">
+    <style>
+        
+    </style>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            toggleBtn.innerHTML = sidebar.classList.contains('open') ? '▶' : '◀';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <span>Chanel</span>
+        <img src="assets/logo.png" alt="">
+    </div>
+
+    <img class="home" src="assets/media/home.jpg" alt="">
+    
+    <div class="nav">
+      <a href="..\index.html">Home</a>
+      <a href="profil.html">Profile</a>
+      <a href="galeri.html">Galeri</a>
+    </div>
+    <div class="sidebar">
+        <a class="fa fa-facebook" href="http://facebook.com">Facebook</a>
+        <a class="fa fa-linkedin" href="http://linkedin.com">LinkedIn</a>
+        <a class="fa fa-instagram" href="http://instagram.com">Instagram</a>
+        <a class="fa fa-github" href="http://github.com">GitHub</a>
+    </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">◀</button>
+    
+
+    <!-- content -->
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+    <div class="gallery-container">
+        <div class="gallery-wrapper" id="gallery">
+            <!-- 20 gambar -->
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a1.jpg" alt="Image 1"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a2.jpg" alt="Image 2"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a3.jpg" alt="Image 3"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a4.jpg" alt="Image 4"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a5.jpg" alt="Image 5"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a6.jpg" alt="Image 6"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a7.jpg" alt="Image 7"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/aksesoris.jpg" alt="Image 8"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/aksesoris2.jpg" alt="Image 9"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/aksesoris3.jpg" alt="Image 10"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/baju.jpg" alt="Image 11"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/bawah-sepatu.jpg" alt="Image 12"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/sepatu.jpg" alt="Image 13"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/tas.jpg" alt="Image 14"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/tas2.jpg" alt="Image 15"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/tas3.jpg" alt="Image 16"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a5.jpg" alt="Image 17"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a6.jpg" alt="Image 18"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a7.jpg" alt="Image 19"></div>
+            <div class="gallery-item"><img src="http://localhost/UHER_17230453/assets/media/a3.jpg" alt="Image 20"></div>
+        </div>
+    </div>
+
+    <script>
+        let index = 0;
+        const gallery = document.getElementById('gallery');
+        const items = document.querySelectorAll('.gallery-item');
+        const totalItems = items.length;
+        const itemsPerSlide = 3; // Menampilkan 3 gambar per slide
+        const totalSlides = Math.ceil(totalItems / itemsPerSlide);
+
+        function updateGallery() {
+            if (index >= totalSlides) {
+                index = 0; // Kembali ke awal setelah slide terakhir
+            } else if (index < 0) {
+                index = totalSlides - 1; // Kembali ke slide terakhir jika mundur dari awal
+            }
+            gallery.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function nextSlide() {
+            index++;
+            updateGallery();
+        }
+        function prevSlide() {
+            index--;
+            updateGallery();
+        }
+        function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide, 3000); // Gambar berganti setiap 3 detik
+        }
+        setTimeout(autoSlide, 3000);
+    </script>
+
+    <!-- footer -->
+     <footer>
+        <span>All right reserved &copy; Copyright 2025, Alvin Zaki Rosyidin - 17230453. Created with &#10084;</span>
+     </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/profil.css">
+    <style>
+        
+    </style>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            toggleBtn.innerHTML = sidebar.classList.contains('open') ? '▶' : '◀';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <span>Chanel</span>
+        <img src="assets/logo.png" alt="">
+    </div>
+
+    <img class="home" src="assets/media/home.jpg" alt="">
+    
+    <div class="nav">
+      <a href="..\index.html">Home</a>
+      <a href="profil.html">Profile</a>
+      <a href="galeri.html">Galeri</a>
+    </div>
+    <div class="sidebar">
+        <a class="fa fa-facebook" href="http://facebook.com">Facebook</a>
+        <a class="fa fa-linkedin" href="http://linkedin.com">LinkedIn</a>
+        <a class="fa fa-instagram" href="http://instagram.com">Instagram</a>
+        <a class="fa fa-github" href="http://github.com">GitHub</a>
+    </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">◀</button>
+    
+
+    <!-- content -->
+    <div class="content">
+        <h2>Who We Are</h2>
+        <p>Welcome to our clothing store! We are committed to providing stylish, comfortable, and high-quality fashion for everyone. Our team works hard to bring you the latest trends at affordable prices.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to inspire confidence and self-expression through fashion. We believe that everyone deserves to look and feel great, no matter their style.</p>
+        
+        <h2>Meet Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="CEO">
+                <p><strong>Jane Doe</strong></p>
+                <p>CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Designer">
+                <p><strong>John Smith</strong></p>
+                <p>Lead Designer</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Marketing">
+                <p><strong>Sarah Lee</strong></p>
+                <p>Marketing Head</p>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- footer -->
+     <footer>
+        <span>All right reserved &copy; Copyright 2025, Alvin Zaki Rosyidin - 17230453. Created with &#10084;</span>
+     </footer>
+</body>
+</html>

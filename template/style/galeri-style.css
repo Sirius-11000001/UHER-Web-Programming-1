@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #F1FAFF, #dfcbff, #F1FAFF);
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-x: hidden;
+}
+.header {
+    background: linear-gradient(to bottom, #CBE4FF, #8791ff);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    animation: slide1 3s ease;
+}
+@keyframes slide1 {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.header span {
+    font-family: 'Sacramento';
+    letter-spacing: 1px;    
+    font-size: 3rem;
+    padding: 0;
+    margin-right: 20px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+.header span:hover {
+    color: grey;
+    transition: all 1s;
+}
+.header img {
+    width: 100px;
+    height: 100px;
+}
+.nav {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+.home {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    filter: ();
+    margin-top: -150px;
+    z-index: -1;
+}
+.nav a {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(145, 151, 252);
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid white;
+    box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.4);
+    transition: all 2s;
+}
+.nav a:hover {
+    background-color: rgb(217, 217, 217);
+    color: black;
+}
+.sidebar {
+    position: fixed;
+    margin-top: 60px;
+    top: 80px;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background: #1e1e2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: right 1s;
+    border-top-left-radius: 20px;
+    z-index: 1 !important;
+}
+.sidebar.open {
+    right: 0;
+}
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    border-radius: 5px;
+    transition: background 1s;
+}
+.sidebar a:hover {
+    background: #34344a;
+}
+.toggle-btn {
+    margin-top: 60px;
+    position: fixed;
+    top: 90px;
+    right: 10px;
+    background: #9c97ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: right 0.7s, all 0.7s;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.toggle-btn:hover {
+    background-color: rgb(209, 209, 209);
+}
+.sidebar.open ~ .toggle-btn {
+    right: 210px;
+}
+
+
+
+/* content */
+.gallery-container {
+    position: relative;
+    width: 80%;
+    max-width: 1900px;
+    margin: auto;
+    overflow: hidden;
+    z-index: -1 !important;
+}
+.gallery-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.gallery-item {
+    flex: 0 0 calc(100% / 3); /* Menampilkan 3 gambar dalam satu slide */
+    box-sizing: border-box;
+    padding: 10px;
+}
+.gallery-item img {
+    width: 280px;
+    height: 360px;
+    margin-left: 6.8%;
+    border-radius: 10px;
+}
+.prev, .next {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 40%;
+}
+.prev { 
+    left: 10px;
+}
+.next { 
+    right: 10px; 
+}
+
+/* footer */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 50px;
+}
+
