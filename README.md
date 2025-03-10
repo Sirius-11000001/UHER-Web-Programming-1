@@ -16,4 +16,4 @@ Tugas ini memiliki sebuah Tema 'Promosi Fashion'. Dengan kriteria:
 ----------------------------------------------------------------------------
 ## Kalian dapat mengubah gambarnya sesuai dengan tema yang kalian inginkan.
 ---------------------------------------------------------------------------
-Perlu diingat bahwa template ini tidak responsive, jadi kalian dapat menambahkannya jika diperlukan.
+Perlu diingat bahwa template ini tidak menggunakan media query atau semacamnya, jadi kalian dapat menambahkannya jika diperlukan.
